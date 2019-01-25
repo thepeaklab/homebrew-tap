@@ -10,11 +10,12 @@ class Mockturtle < Formula
   depends_on 'libressl'
 
   def install
-    system "swift build --configuration release --build-path #{prefix} --disable-sandbox"
-    system "mv #{prefix}/release/Run #{prefix}/bin/Run"
-    
+    system "swift build --configuration release --disable-sandbox"
+    system "mv .build/release/Run #{prefix}"
+    system "mv bin/mockturtle #{prefix}"
+
     bin.mkpath
-    bin.install "#{prefix}/release/swiftychangelog"
+    bin.install "#{prefix}/mockturtle"
   end
 
   test do
