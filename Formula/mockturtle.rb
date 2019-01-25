@@ -8,7 +8,7 @@ class Mockturtle < Formula
   depends_on :xcode => ["10.0", :build]
 
   def install
-    system "swift build --configuration release --build-path #{prefix}"
+    system "swift build --configuration release --build-path #{prefix} --disable-sandbox"
     system "mv #{prefix}/release/Run #{prefix}/bin/Run"
     
     bin.mkpath
