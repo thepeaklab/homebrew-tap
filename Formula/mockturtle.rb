@@ -6,6 +6,8 @@ class Mockturtle < Formula
   sha256 ""
 
   depends_on :xcode => ["10.0", :build]
+  depends_on formula: 'ctls'
+  depends_on formula: 'libressl'
 
   def install
     system "swift build --configuration release --build-path #{prefix} --disable-sandbox"
