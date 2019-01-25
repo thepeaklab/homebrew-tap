@@ -12,7 +12,7 @@ class Mockturtle < Formula
   def install
     system "swift build --configuration release --disable-sandbox"
     system "mv .build/release/Run #{prefix}"
-    system "mv bin/mockturtle #{prefix}"
+    system "mv homebrew/mockturtle #{prefix}"
 
     bin.mkpath
     bin.install "#{prefix}/mockturtle"
