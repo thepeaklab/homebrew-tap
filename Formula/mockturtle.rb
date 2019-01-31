@@ -1,7 +1,7 @@
 class Mockturtle < Formula
   desc "Mockturtle"
   homepage "https://github.com/thepeaklab/mockturtle"
-  url "git@github.com:thepeaklab/mockturtle.git", using: :git
+  url "https://github.com/thepeaklab/mockturtle.git", using: :git
   version "0.1.0"
   sha256 ""
 
